@@ -6,6 +6,17 @@ menu.onclick = () => {
     menu.classList.toggle("move");
 };
 
+function preloadImages(images) {
+    for (let i = 0; i < images.length; i++) {
+      const img = new Image();
+      img.src = images[i];
+    }
+  }
+
+  preloadImages([
+    'img/pic-bg.jpg',
+  ]);
+
 
 function validate(){
     let name = document.querySelector('.name');
@@ -62,4 +73,11 @@ let scrollTop = document.querySelector(".scroll-top");
 window.addEventListener("scroll", () => {
     scrollTop.classList.toggle("scroll-active", window.scrollY > 0);
 });
+
+$(document).ready(function() {
+    $('.work-item-popup').magnificPopup({
+      type: 'image',
+      gallery: { enabled: true }
+    });
+  });
 
