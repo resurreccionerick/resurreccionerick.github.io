@@ -150,7 +150,7 @@ header {
 
 .home-content {
   position: relative;
-  max-width: 760px;
+  max-width: 1760px;
   width: 100%;
   margin: auto;
   display: flex;
@@ -235,14 +235,10 @@ p .color {
   margin-bottom: 1.5rem;
 }
 
-.home-text .color {
+.home-text h1 {
   color: var(--main-color);
 }
 
-.home-text .color:hover {
-  color: var(--bg-color);
-  transition: 0.3s all linear;
-}
 
 .social {
   display: flex;
@@ -315,7 +311,7 @@ p .color {
 
 .about-text p {
   font-size: 1rem;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
   text-align: justify;
   margin-bottom: 1.5rem;
 }
@@ -397,127 +393,10 @@ p .color {
 }
 
 .img:hover {
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
+  transform: translateY(-10px);
   transition: 0.3s all linear;
 }
-/* /* .work {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-  }
-  
-  .work-item {
-    text-align: center;
-    max-width: 400px;
-    margin-right: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .work-item:last-child {
-    margin-right: 0;
-  }
-  
-  .work-item img {
-    display: block;
-    width: 450;
-    height: 450;
-    margin: 0 auto 20px;
-  }
-  
-
-  @media (max-width: 600px) {
-    .work-item img {
-      width: 100px;
-      height: 100px;
-    }
-  }
-  
-  .work-item h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .work-item p {
-    font-size: 16px;
-    line-height: 1.5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
- */
-
-/* .portfolio-content{
-    display: contents;
-    grid-template-columns: repeat(1,1fr);
-    gap: 2rem;
-}
-
-.portfolio-box{
-    position: relative;
-    width: 100%;
-    height:500px;
-    border-radius: 1rem;
-    overflow: hidden;
-}
-
-.portfolio-img{
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
-    object-position: center;
-}
-
-.portfolio-overlay{
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(22, 59, 50, 0.7);
-}
-
-.portfolio-overlay h1{
-    color: var(--main-color);
-    font-weight: 600;
-    background: yellow;
-    color: black;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-
-.portfolio-overlay p{
-    margin: 10px;
-    margin-bottom: 10px;
-}
-
-.portfolio-overlay .bx{
-    font-size: 24px;
-    padding: 10px;
-    background: var(--main-color);
-    color: var(--bg-color);
-    border-radius: 4px;
-}
-
-.portfolio-overlay .bx:hover{
-    background-color: green;
-    transition: 0.3s all linear;
-}
-
-.portfolio-box:hover .portfolio-overlay{
-    top: 0;
-    transition: 0.5s all ease 0s;
-}  */
 
 .portfolio-section {
   display: flex;
@@ -534,6 +413,32 @@ p .color {
   text-align: center;
 }
 
+.github-link {
+  position: relative;
+  display: inline-block;
+}
+
+.link-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-image: url('img/github.png');/* Replace with your link icon image */
+  background-color: var(--body-color); /* Change the background color as per your requirement */
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.github-link:hover .link-icon {
+  opacity: 1;
+}
+
+
 .skills-content {
   display: flex;
   flex-wrap: wrap;
@@ -545,7 +450,7 @@ p .color {
   width: 16.6%;
   margin-right: 1%;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .skill img {
@@ -554,7 +459,7 @@ p .color {
 }
 
 .skill h3 {
-  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 @media screen and (max-width: 768px) {
@@ -577,10 +482,6 @@ p .color {
 }
 
 @media screen and (max-width: 480px) {
-  .skills-content {
-    margin-top: 20px;
-  }
-
   .skill {
     margin: 5px;
   }
@@ -899,10 +800,7 @@ p .color {
     grid-template-columns: 1fr;
   }
 
-  .skills-content {
-    padding: 50px;
-    margin-top: 50px;
-  }
+
 
   .skills-list {
     display: flex;
