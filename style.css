@@ -166,8 +166,7 @@ header {
   object-fit: cover;
   object-position: center;
   border-radius: 5%;
-  padding: 4px;
-  background: white;
+  background: #007bff;
   overflow: hidden;
   margin-bottom: 2rem;
 }
